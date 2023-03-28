@@ -37,7 +37,13 @@
 }
 
 /*resets*/
-.fieldset-default {
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fieldset-reset {
   margin: 0;
   padding: 0;
   border: 0;
