@@ -1,0 +1,31 @@
+.head-nav {
+  @extend .flex-wrap;
+  padding: 5px 0;
+
+  &__container {
+    display: flex;
+  }
+
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+
+    margin-left: auto;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    a {
+      display: flex;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      padding: 10px 15px;
+      color: var(--white);
+    }
+  }
+}

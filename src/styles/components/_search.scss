@@ -1,0 +1,10 @@
+
+.search {
+  &__opener {
+    @extend .btn-reset;
+    @extend .flex-centered-content;
+    svg {
+      fill: var(--accent);
+    }
+  }
+}

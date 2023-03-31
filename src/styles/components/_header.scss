@@ -1,0 +1,24 @@
+.header {
+  &__top {
+    background-color: var(--accent);
+  }
+
+  &__middle {
+    &-container {
+      @extend .flex-wrap;
+      align-items: center;
+    }
+
+    padding: 20px 0;
+    background-color: var(--white);
+  }
+
+  &__bottom {
+    background-color: var(--light);
+
+    &-container {
+      @extend .flex-wrap;
+      align-items: center;
+    }
+  }
+}
