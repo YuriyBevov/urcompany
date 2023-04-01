@@ -1,7 +1,31 @@
 .main-nav {
   outline: 1px solid red;
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--accent);
+
+  z-index: 101;
+
+  &__container {
+    position: relative;
+
+  }
+
+  &.active {
+    display: flex;
+  }
 
   &__list {
-    display: none;
+    //display: none;
+
+    outline: 1px solid red;
+    height: auto;
   }
 }

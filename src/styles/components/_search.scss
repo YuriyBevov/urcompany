@@ -1,5 +1,11 @@
 
 .search {
+  margin-right: 30px;
+
+  @include m-b-laptop-down {
+    display: none;
+  }
+
   &__opener {
     @extend .btn-reset;
     @extend .flex-centered-content;
@@ -7,4 +13,6 @@
       fill: var(--accent);
     }
   }
+
+
 }

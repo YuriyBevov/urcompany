@@ -1,6 +1,10 @@
 .header {
   &__top {
     background-color: var(--accent);
+
+    @include m-b-laptop-down {
+      display: none;
+    }
   }
 
   &__middle {
@@ -11,6 +15,20 @@
 
     padding: 20px 0;
     background-color: var(--white);
+
+    .burger {
+      display: none;
+      background-color: transparent;
+
+      @include m-b-laptop-down {
+        display: flex;
+      }
+    }
+
+    @include m-b-laptop-down {
+      padding: 10px 0;
+      background-color: var(--light);
+    }
   }
 
   &__bottom {
@@ -19,6 +37,18 @@
     &-container {
       @extend .flex-wrap;
       align-items: center;
+    }
+
+    @include m-b-laptop-down {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @include m-b-laptop-down {
+      margin: 0;
     }
   }
 }
