@@ -13,19 +13,132 @@
 
   z-index: 101;
 
+  /*&__logo {
+    margin-bottom: 50px;
+  }*/
+
   &__container {
     position: relative;
-
+    max-width: 1920px;
+    padding: 0;
   }
 
   &.active {
     display: flex;
   }
 
+  &__field {
+    position: relative;
+    @extend .flex-column;
+
+    padding: 30px;
+    height: 100%;
+    width: calc(100% / 3);
+
+    outline: 1px solid yellow;
+
+    &--inner {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+
+      .main-nav__field-header {
+        padding-top: 20px;
+
+        & > span {
+          display: inline-block;
+
+          font-size: 20px;
+          font-weight: 700;
+          //margin-bottom: 50px;
+          color: var(--accent);
+        }
+      }
+
+      .main-nav__list-item a {
+        color: var(--accent);
+      }
+    }
+
+    &--gray {
+      background-color: var(--light);
+    }
+
+    &--white {
+      background-color: var(--white);
+    }
+
+    &-header {
+      display: flex;
+      min-height: 120px;
+      outline: 1px solid red;
+    }
+  }
+
   &__list {
     //display: none;
 
+    @extend .list-reset;
     outline: 1px solid red;
-    height: auto;
+
+    margin-bottom: 50px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    a {
+      @extend .flex-wrap;
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+      width: 100%;
+      padding: 10px 15px;
+      color: var(--gray);
+
+      span {
+        display: inline-block;
+        padding-right: 20px;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .head-nav {
+    &__list {
+      @extend .flex-column;
+      margin: 0;
+      outline: 1px solid red;
+    }
+
+    &__inner-list {
+      background-color: transparent;
+
+      &-item a {
+        color: var(--white);
+      }
+    }
+  }
+
+  .header-contacts {
+    display: flex !important;
+    margin-top: auto;
+    outline: 1px solid red;
+
+    &__field {
+      a {
+        color: var(--white);
+      }
+
+      svg {
+        fill: var(--white);
+      }
+
+      margin-bottom: 20px;
+    }
+
+    margin-bottom: 50px;
   }
 }
