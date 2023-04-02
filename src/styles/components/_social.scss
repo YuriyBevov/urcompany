@@ -1,0 +1,18 @@
+.social {
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+    align-items: center;
+  }
+
+  &__list-item {
+    @extend .hover-opacity;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    svg {
+      fill: var(--accent);
+    }
+  }
+}

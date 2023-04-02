@@ -1,5 +1,34 @@
 <header class="header">
-  <div class="lw-container">
-    HEADER
+  <div class="header__top">
+    <div class="container">
+      @include('../components/head-nav.html')
+    </div>
   </div>
+  <div class="header__middle">
+    <div class="container header__middle-container">
+      <div class="header__logo">
+        <img src="https://urcompany.org/wp-content/themes/otk/img/logo.svg" alt="ЮркомКомпани" width="180" height="66">
+      </div>
+
+      @include('../components/search.html')
+
+      @include('../components/header-contacts.html')
+
+      @include('../components/header-worktime.html')
+
+      @include('../components/social.html')
+
+      @include('../components/burger.html')
+
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container header__bottom-container">
+      @include('../components/burger.html')
+      @include('../components/header-nav.html')
+    </div>
+  </div>
+
+  @include('../components/main-nav.html')
 </header>
