@@ -1,6 +1,8 @@
 .header-contacts {
   margin-right: 30px;
 
+
+
   @include m-b-down(1140px) {
     margin-right: 20px;
   }
@@ -24,6 +26,8 @@
     font-weight: 600;
 
     color:var(--accent);
+
+    @extend .hover-opacity;
 
     @include m-b-down(1140px) {
       font-size: 12px;

@@ -5,6 +5,14 @@
     @include m-b-laptop-down {
       display: none;
     }
+
+    .head-nav {
+      &__list-item--multilevel a {
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
   &__middle {

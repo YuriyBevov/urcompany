@@ -9,6 +9,7 @@
   &__opener {
     @extend .btn-reset;
     @extend .flex-centered-content;
+    @extend .hover-opacity;
     svg {
       fill: var(--accent);
     }

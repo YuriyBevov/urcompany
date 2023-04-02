@@ -21,6 +21,16 @@
       text-align: center;
       text-transform: uppercase;
       color: var(--accent);
+      transition: background var(--main-transition);
+
+      @include m-b-tablet-up {
+        @include hover-bordered(var(--accent));
+
+        &:hover,
+        &:focus {
+          background-color: var(--white);
+        }
+      }
     }
   }
 }

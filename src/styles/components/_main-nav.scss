@@ -132,6 +132,12 @@
     &--blue {
       background-color: var(--accent);
       z-index: 3;
+
+      .main-nav__list-item a {
+        @include m-b-tablet-up {
+          @include hover-bordered(var(--white));
+        }
+      }
     }
 
     &--gray {
@@ -218,8 +224,6 @@
           display: block;
           position: static;
           background-color: transparent;
-
-
         }
       }
 
@@ -262,7 +266,9 @@
       margin-right: 25px;
       color: var(--gray);
 
-      //@extend .hover-bordered;
+      @include m-b-tablet-up {
+        @include hover-bordered(var(--accent));
+      }
 
       span {
         display: inline-block;
