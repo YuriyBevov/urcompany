@@ -266,12 +266,13 @@
       font-weight: 500;
       font-size: 18px;
       padding: 5px 0;
+      min-height: 40px;
 
       margin-right: 25px;
       color: var(--gray);
 
       @include m-b-tablet-up {
-        @include hover-bordered(var(--accent));
+        @include hover-bordered(var(--accent), 5px);
       }
 
       span {
