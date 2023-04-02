@@ -1,96 +1,101 @@
 <nav class="main-nav active">
   <div class="lw-container-fluid main-nav__container">
+    <button class="main-nav__closer" aria-label="Закрыть">
+      <svg width="18" height="18">
+        <use xlink:href="./assets/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
 
-    <div class="main-nav__field">
-      <div class="main-nav__field-header">
+    <div class="main-nav__section main-nav__section--blue">
+      <div class="main-nav__section-header">
         <a href="/" class="main-nav__logo">
           <img src="https://urcompany.org/wp-content/themes/otk/img/logo-white.svg" data-src="https://urcompany.org/wp-content/themes/otk/img/logo-white.svg" alt="ЮркомКомпани" width="140" height="53">
         </a>
       </div>
 
-      <ul class="main-nav__list">
-        <li class="main-nav__list-item">
-          <a href="#">
-            <span>Налоговые услуги</span>
-          </a>
+      <div class="main-nav__section-body">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a href="#"><span>Налоговые услуги</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Юридические услуги</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Аудиторские услуги</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Бухгалтерские услуги</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Миграционные услуги</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Абонентское юридическое обслуживание</span></a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#"><span>Центр развития бизнеса в России</span></a>
+          </li>
+        </ul>
 
-          <div class="main-nav__field main-nav__field--gray main-nav__field--inner">
-            <div class="main-nav__field-header">
-              <span>Коммерческие судебные споры и альтернативное разрешение споров</span>
-            </div>
+        @include('./head-nav.html')
+        @include('./header-contacts.html')
+      </div>
+    </div>
 
-            <ul class="main-nav__list">
-              <li class="main-nav__list-item">
-                <a href="#">
-                  <span>Налоговые услуги</span>
-                </a>
+    <div class="main-nav__section main-nav__section--gray">
+      <div class="main-nav__section-header">
+        <span>Коммерческие судебные споры и альтернативное разрешение споров</span>
+      </div>
 
-                <div class="main-nav__field main-nav__field--white main-nav__field--inner">
-                  <div class="main-nav__field-header">
-                    <span>Коммерческие судебные споры и альтернативное разрешение споров</span>
-                  </div>
+      <div class="main-nav__section-body">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Налоговые услуги</span>
+            </a>
+          </li>
 
-                  <ul class="main-nav__list">
-                    <li class="main-nav__list-item">
-                      <a href="#">
-                        <span>Налоговые услуги</span>
-                      </a>
-                    </li>
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Юридические услуги</span>
+            </a>
+          </li>
 
-                    <li class="main-nav__list-item">
-                      <a href="#">
-                        <span>Юридические услуги</span>
-                      </a>
-                    </li>
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Аудиторские услуги</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-                    <li class="main-nav__list-item">
-                      <a href="#">
-                        <span>Аудиторские услуги</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+    <div class="main-nav__section main-nav__section--white">
+      <div class="main-nav__section-header">
+        <span>Коммерческие судебные споры и альтернативное разрешение споров</span>
+      </div>
 
+      <div class="main-nav__section-body">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Налоговые услуги</span>
+            </a>
+          </li>
 
-              <li class="main-nav__list-item">
-                <a href="#">
-                  <span>Юридические услуги</span>
-                </a>
-              </li>
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Юридические услуги</span>
+            </a>
+          </li>
 
-              <li class="main-nav__list-item">
-                <a href="#">
-                  <span>Аудиторские услуги</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Юридические услуги</span></a>
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Аудиторские услуги</span></a>
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Бухгалтерские услуги</span></a>
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Миграционные услуги</span></a>
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Абонентское юридическое обслуживание</span></a>
-        </li>
-        <li class="main-nav__list-item">
-          <a href="#"><span>Центр развития бизнеса в России</span></a>
-        </li>
-      </ul>
-
-      @include('./head-nav.html')
-
-      @include('./header-contacts.html')
+          <li class="main-nav__list-item">
+            <a href="#">
+              <span>Аудиторские услуги</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</nav>
