@@ -1,4 +1,3 @@
-
 .main-nav {
   display: none;
 
@@ -47,18 +46,64 @@
     }
   }
 
-  &-closer {
+  &-back {
+    display: none;
+
     @extend .btn-reset;
     @extend .flex-centered-content;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 40px;
+
+    position: relative;
+    width: fit-content;
+    min-width: 40px;
     height: 40px;
-    z-index: 101;
+    margin-left: auto;
+    z-index: 102;
 
     svg {
       fill: var(--accent);
+      transform: rotate(180deg);
+    }
+
+    @include m-b-laptop-down {
+      display: flex;
+    }
+  }
+
+  &-closer {
+    @extend .btn-reset;
+    @extend .flex-centered-content;
+
+    width: fit-content;
+    min-width: 40px;
+    height: 40px;
+
+    margin-left: auto;
+    z-index: 105;
+    &--mobile {
+      display: none;
+      position: relative;
+
+      svg {
+        fill: var(--white);
+      }
+
+      @include m-b-laptop-down {
+        display: flex;
+      }
+    }
+
+    &--desktop {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+
+      svg {
+        fill: var(--accent);
+      }
+
+      @include m-b-laptop-down {
+        display: none;
+      }
     }
   }
 
@@ -73,39 +118,51 @@
     overflow: hidden;
     overflow-y: auto;
 
+    @include m-b-laptop-up {
+    }
+
+    @include m-b-laptop-down {
+      width: 100%;
+    }
+
+    @include m-b-tablet-down {
+      padding: 30px 10px;
+    }
+
     &--blue {
-      background-color: var(--blue);
+      background-color: var(--accent);
+      z-index: 3;
     }
 
     &--gray {
       background-color: var(--light);
+      z-index: 2;
     }
 
     &--white {
       background-color: var(--white);
+      z-index: 1;
     }
 
     &--gray,
     &--white {
+
+      @include m-b-laptop-down {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       .main-nav__list-item {
         a {
           color: var(--accent);
-
-          &::after {
-            border-color: var(--accent);
-          }
         }
       }
-    }
 
-    &:nth-of-type(2) {
-      transform: translateX(-100%);
-      z-index: 2;
-    }
-
-    &:nth-of-type(3) {
-      transform: translateX(-200%);
-      z-index: 1;
+      .main-nav-inner-list-opener {
+        &::after {
+          border-color: var(--accent);
+        }
+      }
     }
 
     &-header {
@@ -115,11 +172,23 @@
 
       padding-top: 20px;
 
+      @include m-b-mobile-lg-down {
+        margin-bottom: 20px;
+      }
+
       & > span {
         display: inline-block;
         font-size: 20px;
         font-weight: 700;
+
+        padding-right: 25px;
+        max-width: 720px;
+
         color: var(--accent);
+
+        @include m-b-mobile-lg-down {
+          font-size: 18px;
+        }
       }
     }
 
@@ -140,12 +209,14 @@
               padding: 5px 0;
               width: fit-content;
               text-transform: initial;
-              color: #e0e0e0;
+              color: var(--white);
             }
           }
         }
 
         &__inner-list {
+          display: block;
+          position: static;
           background-color: transparent;
 
 
@@ -181,35 +252,52 @@
     display: flex;
     align-items: center;
 
-    @include m-b-laptop-down {
-      padding-right: 25px;
-    }
-
     a {
       @extend .flex-wrap;
       align-items: center;
       font-weight: 500;
       font-size: 18px;
       padding: 5px 0;
+
+      margin-right: 25px;
       color: var(--gray);
+
+      //@extend .hover-bordered;
 
       span {
         display: inline-block;
-        margin-right: auto;
       }
 
-      @include m-b-laptop-down {
-        &::after {
-          position: absolute;
-          top: 8px;
-          right: 0;
-          content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid var(--white);
-          border-right: 2px solid var(--white);
-          transform: rotate(135deg);
-        }
+      @include m-b-mobile-lg-down {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-inner-list-opener {
+    position: relative;
+    display: none;
+    width: fit-content;
+    min-width: 40px;
+    height: 40px;
+    @extend .flex-centered-content;
+    @extend .btn-reset;
+
+    margin-left: auto;
+
+    @include m-b-laptop-down {
+      display: flex;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid var(--white);
+        border-right: 2px solid var(--white);
+        transform: translate(-50%,-50%) rotate(45deg);
       }
     }
   }

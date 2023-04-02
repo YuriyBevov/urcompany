@@ -18,6 +18,7 @@
 
     .burger {
       display: none;
+      margin-left: auto;
       background-color: transparent;
 
       @include m-b-laptop-down {
@@ -49,6 +50,30 @@
 
     @include m-b-laptop-down {
       margin: 0;
+    }
+
+    @include m-b-mobile-lg-down {
+      display: none;
+    }
+  }
+
+  .social {
+    @include m-b-laptop-down {
+      margin: 0 auto;
+    }
+
+    @include m-b-mobile-lg-down {
+      margin: 0;
+    }
+
+    &__list {
+      @include m-b-laptop-down {
+        padding: 0 30px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding: 0;
+      }
     }
   }
 }

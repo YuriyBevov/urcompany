@@ -1,22 +1,17 @@
 .social {
-
-  @include m-b-laptop-down {
-    margin: 0 auto;
-  }
-
   &__list {
     @extend .list-reset;
     @extend .flex-wrap;
     align-items: center;
-
-    @include m-b-laptop-down {
-      padding: 0 30px;
-    }
   }
 
   &__list-item {
     &:not(:last-child) {
       margin-right: 15px;
+    }
+
+    svg {
+      fill: var(--accent);
     }
   }
 }
