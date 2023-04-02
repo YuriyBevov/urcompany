@@ -24,7 +24,7 @@
       transition: background var(--main-transition);
 
       @include m-b-tablet-up {
-        @include hover-bordered(var(--accent));
+        @include hover-bordered(var(--accent), 10px);
 
         &:hover,
         &:focus {

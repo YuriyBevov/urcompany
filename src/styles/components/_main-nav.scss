@@ -216,6 +216,10 @@
               width: fit-content;
               text-transform: initial;
               color: var(--white);
+
+              &::after {
+                bottom: 0;
+              }
             }
           }
         }

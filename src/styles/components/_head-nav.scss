@@ -29,7 +29,7 @@
 
 
       @include m-b-tablet-up {
-        @include hover-bordered(var(--white));
+        @include hover-bordered(var(--white), 10px);
       }
     }
 
