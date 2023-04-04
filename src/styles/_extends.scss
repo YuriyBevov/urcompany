@@ -110,3 +110,30 @@
     padding: 0 15px;
   }
 }
+
+/*btns*/
+
+.main-btn {
+  display: flex;
+  align-items: center;
+  @extend .btn-reset;
+  padding: 10px 40px;
+
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  min-width: fit-content;
+  min-height: 60px;
+
+  background-color: var(--accent);
+  color: var(--white);
+
+  &--iconed {
+    padding-left: 10px;
+    svg {
+      margin-right: 10px;
+      fill: var(--white);
+    }
+  }
+
+}
