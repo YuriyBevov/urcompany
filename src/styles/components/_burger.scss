@@ -1,0 +1,19 @@
+.burger {
+  @extend .btn-reset;
+
+  @extend .flex-column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+
+  padding: 5px;
+  background-color: var(--white);
+
+  &__line {
+    width: 30px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: var(--accent);
+  }
+}

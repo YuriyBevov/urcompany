@@ -1,0 +1,33 @@
+.callback-info {
+  @extend .flex-column;
+  padding: 30px;
+
+  background-color: var(--gray);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+  @include m-b-down(860px) {
+    padding: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 60px;
+    color: var(--accent);
+
+    @include m-b-down(860px) {
+      font-size: 18px;
+    }
+  }
+
+  &__opener {
+    &:first-of-type {
+      margin-top: auto;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @extend .hover-opacity;
+  }
+}

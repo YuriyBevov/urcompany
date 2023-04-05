@@ -4,7 +4,7 @@
 :root {
     // base
     --font-family: "Montserrat", sans-serif;
-    --content-width: 1240px;
+    --content-width: 1200px;
     --content-fluid-width: 1790px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -27,4 +27,7 @@
     --main-scrollbar-width: 6px;
     --main-scrollbar-color: var(--white);
     --main-scrollbar-thumb-color: var(--accent);
+
+    --main-transition: .25s .05s  ease-in;
+    --slow-transition: .7s .05s ease-in;
   }
