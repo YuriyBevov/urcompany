@@ -477,7 +477,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a {
+.flex-centered-content, .social__list-item a, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,6 +513,7 @@ a {
   width: var(--main-scrollbar-width);
 }
 .main-scroll::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
   background-color: var(--main-scrollbar-thumb-color);
 }
 
@@ -630,6 +631,12 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-fluid-width);
 }
+.lw-table-container {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
 /* Компоненты */
 .header__top {
   background-color: var(--accent);
@@ -1318,10 +1325,20 @@ a {
 
 .service-info__title {
   display: inline-block;
-  font-weight: 700;
   font-size: 32px;
+  font-weight: 700;
   margin-bottom: 40px;
   color: var(--accent);
+}
+@media (max-width: 767px) {
+  .service-info__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .service-info__title {
+    font-size: 20px;
+  }
 }
 .service-info__list {
   display: -ms-grid;
@@ -1330,6 +1347,12 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+}
+@media (max-width: 767px) {
+  .service-info__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 .service-info__list-item {
   display: -webkit-box;
@@ -1345,11 +1368,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   padding: 20px;
   background-color: var(--gray);
   -webkit-transition: background-color var(--main-transition);
   -o-transition: background-color var(--main-transition);
   transition: background-color var(--main-transition);
+}
+@media (max-width: 767px) {
+  .service-info__list-item a {
+    padding: 15px;
+  }
 }
 .service-info__list-item a span {
   font-size: 18px;
@@ -1360,10 +1389,16 @@ a {
   -o-transition: color var(--main-transition);
   transition: color var(--main-transition);
 }
+@media (max-width: 767px) {
+  .service-info__list-item a span {
+    font-size: 16px;
+  }
+}
 .service-info__list-item a svg {
   min-width: 20px;
   height: 19px;
   fill: var(--accent);
+  margin-left: auto;
   -webkit-transition: fill var(--main-transition);
   -o-transition: fill var(--main-transition);
   transition: fill var(--main-transition);
@@ -1398,8 +1433,13 @@ a {
 }
 @media (max-width: 1023px) {
   .main-section__container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 .main-section__content .service-info {
@@ -1421,6 +1461,9 @@ a {
 }
 .main-section__content strong {
   font-weight: 600;
+}
+.main-section__content > ul {
+  margin-bottom: 50px;
 }
 .main-section__content > ul li {
   position: relative;
@@ -1447,8 +1490,7 @@ a {
 .main-section__content table {
   width: 100%;
   min-width: 570px;
-  overflow: hidden;
-  overflow-y: auto;
+  margin-bottom: 60px;
 }
 .main-section__content table:not(:last-child) {
   margin-bottom: 50px;

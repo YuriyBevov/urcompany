@@ -9,7 +9,8 @@
     margin-bottom: 30px;
 
     @include m-b-laptop-down {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -41,6 +42,7 @@
 
     & > ul {
       @extend .list-reset;
+      margin-bottom: 50px;
 
       li {
         position: relative;
@@ -73,8 +75,7 @@
     table {
       width: 100%;
       min-width: 570px;
-      overflow: hidden;
-      overflow-y: auto;
+      margin-bottom: 60px;
 
       &:not(:last-child) {
         margin-bottom: 50px;

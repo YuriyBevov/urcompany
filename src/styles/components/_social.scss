@@ -11,6 +11,10 @@
       margin-right: 15px;
     }
 
+    a {
+      @extend .flex-centered-content;
+    }
+
     svg {
       fill: var(--accent);
     }
