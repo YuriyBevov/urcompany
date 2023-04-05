@@ -1,4 +1,114 @@
+$block-padding: 20px 0;
 .footer {
+  padding: 40px 0;
+  background-color: var(--accent);
+  color: var(--white);
+
+  &__logo {
+    padding: $block-padding;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    padding: $block-padding;
+    display: grid;
+    grid-template-columns: 215px auto 225px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    border-bottom: 1px solid var(--white);
+
+    @include m-b-laptop-down {
+      grid-template-columns: 180px auto 180px;
+    }
+
+    &-part {
+      &--left {
+        @extend .flex-column;
+      }
+
+      &--right {
+        button {
+          @include m-b-laptop-down {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+
+    .contacts {
+      display: flex !important;
+      a {
+        color: var(--white);
+        margin-bottom: 15px;
+        svg {
+          fill: var(--white);
+        }
+      }
+    }
+
+    .social {
+      display: flex !important;
+      margin-top: auto;
+
+      &__list-item:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      a {
+        @extend .flex-centered-content;
+        width: 40px;
+        height: 40px;
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: var(--white);
+      }
+    }
+  }
+
+  &__bottom {
+    padding: $block-padding;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+
+    &-part {
+      outline: 1px solid red;
+
+      a,span {
+        font-size: 14px;
+        color: var(--white);
+
+        /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+        @include m-b-down(800px) {
+          font-size: 12px;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+        @extend .hover-opacity;
+      }
+
+      &--left {
+        text-align: left;
+      }
+
+      &--middle {
+        text-align: center;
+      }
+
+      &--right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+/*.footer {
   background-color: var(--accent);
   color: var(--white);
   padding: 40px 0;
@@ -139,4 +249,4 @@
   &-sitemap {
     text-align: right;
   }
-}
+}*/

@@ -9,18 +9,21 @@
 
 /* Компоненты */
 
-@import "./components/footer.scss";
+
 @import "./components/header.scss";
 @import "./components/burger.scss";
 @import "./components/header-nav.scss";
 @import "./components/head-nav.scss";
 @import "./components/main-nav.scss";
 @import "./components/search.scss";
-@import "./components/header-contacts.scss";
+@import "./components/contacts.scss";
 @import "./components/header-worktime.scss";
 @import "./components/social.scss";
 @import "./components/callback-info.scss";
 @import "./components/service-info.scss";
+
+@import "./components/footer.scss";
+@import "./components/footer-nav.scss";
 
 /* Секции */
 

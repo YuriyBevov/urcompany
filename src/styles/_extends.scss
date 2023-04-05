@@ -129,8 +129,7 @@
 /*btns*/
 
 .main-btn {
-  display: flex;
-  align-items: center;
+  @extend .flex-centered-content;
   @extend .btn-reset;
   padding: 10px 40px;
 
@@ -148,6 +147,19 @@
     svg {
       margin-right: 10px;
       fill: var(--white);
+    }
+  }
+
+  &--outlined {
+    border: 1px solid var(--white);
+    background-color: transparent;
+
+    transition: color var(--main-transition), background-color var(--main-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent);
+      background-color: var(--white);
     }
   }
 
