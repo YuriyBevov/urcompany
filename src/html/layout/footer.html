@@ -1,5 +1,35 @@
 <footer class="footer">
-  <div class="lw-container">
-    FOOTER
+
+  <div class="footer__top">
+    <div class="lw-container">
+      <div class="footer__logo">
+        <img src="https://urcompany.org/wp-content/themes/otk/img/logo.svg" alt="ЮркомКомпани" width="180" height="66">
+      </div>
+    </div>
+  </div>
+  <div class="footer__middle">
+    <div class="lw-container">
+      <div class="footer__grid footer__middle--grid">
+        @include('../components/footer-contacts.html')
+        @include('../components/footer-nav.html')
+        <div class="footer-callback">
+          <a href="#">Связаться с нами</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__social">
+    <div class="lw-container">
+      @include('../components/footer-social.html')
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="lw-container">
+      <div class="footer__grid footer__bottom--grid">
+        <div class="footer-copy">© 2023 Все права защищены,копирование преследуется по закону</div>
+        <div class="footer-policy"><a href="/privacy-policy/">Политика конфиденциальности</a></div>
+        <div class="footer-sitemap"><a href="/sitemap/">Карта сайта</a></div>
+      </div>
+    </div>
   </div>
 </footer>

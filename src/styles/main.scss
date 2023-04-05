@@ -8,6 +8,8 @@
 @import "common";
 
 /* Компоненты */
+
+@import "./components/footer.scss";
 @import "./components/header.scss";
 @import "./components/burger.scss";
 @import "./components/header-nav.scss";
@@ -19,6 +21,7 @@
 @import "./components/social.scss";
 @import "./components/callback-info.scss";
 @import "./components/service-info.scss";
+
 /* Секции */
 
 @import "./sections/main-section.scss";

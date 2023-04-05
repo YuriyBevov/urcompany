@@ -1,0 +1,142 @@
+.footer {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 40px 0;
+
+  a {
+    color: var(--white);
+  }
+
+  &__grid {
+    display: grid;
+  }
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__middle {
+    margin-bottom: 20px;
+
+    &--grid {
+      grid-template-columns: 1fr 550px 1fr;
+    }
+  }
+
+  &-social {
+    &__list {
+      @extend .flex-wrap;
+      padding: 0;
+      column-gap: 10px;
+
+      &-item {
+        @extend .list-reset;
+        svg {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &--grid {
+      padding: 20px 0 0 0;
+      margin-top: 10px;
+      border-top: 1px solid var(--white);
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 14px;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-callback {
+    margin-left: auto;
+    a {
+      width: 210px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--white);
+      font-size: 14px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--accent);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &-contact {
+    &__list {
+      margin: 0;
+      padding: 0;
+
+      &-item {
+        @extend .list-reset;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        svg {
+          fill: var(--white);
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+
+          span {
+            font-size: 14px;
+            font-weight: 600;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-nav {
+    &__list {
+      padding: 0;
+      margin: 0;
+      column-count: 2;
+
+      &-item {
+        @extend .list-reset;
+        margin-bottom: 10px;
+        a {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 18px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &-policy {
+    text-align: center;
+  }
+
+  &-sitemap {
+    text-align: right;
+  }
+}
