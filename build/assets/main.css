@@ -1862,7 +1862,7 @@ a {
   background-repeat: no-repeat;
 }
 .main-section__content .iframe-container {
-  max-width: 450px;
+  max-width: 800px;
 }
 .main-section__content .iframe-wrapper {
   position: relative;
