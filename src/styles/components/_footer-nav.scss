@@ -5,11 +5,16 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 10px;
+    max-width: 540px;
+    margin: 0 auto;
+
+    @include m-b-tablet-down {
+      margin: 0;
+    }
   }
 
   &__list-item {
-    outline: 1px solid red;
-
+    padding-right: 15px;
     a {
       display: flex;
       align-items: center;

@@ -1,0 +1,82 @@
+.side-buttons {
+  position: fixed;
+  left: 50%;
+  bottom: 100px;
+  width: 100%;
+  max-width: 1920px;
+  transform: translateX(-50%);
+}
+
+.side-button {
+  position: fixed;
+  bottom: 0;
+  max-width: 115px;
+
+  @extend .flex-centered-content;
+  flex-direction: column;
+
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--light);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  svg {
+    fill: var(--accent);
+    margin-bottom: 10px;
+    transition: opacity var(--main-transition);
+
+    @include m-b-down(1600px) {
+      margin-bottom: 0;
+    }
+
+    @include m-b-mobile-lg-down {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  span {
+    font-size: 18px;
+    text-align: center;
+    color: var(--accent);
+    transition: opacity var(--main-transition);
+
+    @include m-b-down(1600px) {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      opacity: .6;
+    }
+
+    span {
+      opacity: .6;
+    }
+  }
+
+  &--call {
+    left: 50px;
+
+    @include m-b-down(1600px) {
+      left: initial;
+      right: 50px;
+      bottom: 75px;
+
+      @include m-b-mobile-lg-down {
+        right: 20px;
+        bottom: 55px;
+      }
+    }
+  }
+
+  &--mail {
+    right: 50px;
+
+    @include m-b-mobile-lg-down {
+      right: 20px;
+    }
+  }
+}

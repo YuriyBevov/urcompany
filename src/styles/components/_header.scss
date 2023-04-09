@@ -1,4 +1,8 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
   &__top {
     background-color: var(--accent);
 
