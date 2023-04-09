@@ -1357,7 +1357,7 @@ a {
 .callback-info__title {
   font-weight: 700;
   font-size: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: var(--accent);
 }
 @media (max-width: 860px) {
