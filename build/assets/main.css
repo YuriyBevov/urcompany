@@ -1845,6 +1845,18 @@ a {
   margin-bottom: 40px;
   color: var(--accent);
 }
+@media (max-width: 767px) {
+  .main-section__content h2,
+.main-section__content title-h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 533px) {
+  .main-section__content h2,
+.main-section__content title-h2 {
+    font-size: 24px;
+  }
+}
 .main-section__content strong {
   font-weight: 600;
 }
@@ -1889,7 +1901,6 @@ a {
 }
 .main-section__content table {
   width: 100%;
-  min-width: 570px;
 }
 .main-section__content table:not(:last-child) {
   margin-bottom: 50px;
@@ -1901,7 +1912,6 @@ a {
   font-size: 14px;
   font-weight: 500;
   text-align: left;
-  white-space: nowrap;
   padding: 15px;
   border-bottom: 3px solid var(--black);
   color: var(--white);

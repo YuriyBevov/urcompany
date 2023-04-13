@@ -34,6 +34,14 @@
       font-weight: 700;
       margin-bottom: 40px;
       color: var(--accent);
+
+      @include m-b-tablet-down {
+        font-size: 28px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 24px;
+      }
     }
 
     strong {
@@ -91,7 +99,7 @@
 
     table {
       width: 100%;
-      min-width: 570px;
+      //min-width: 570px;
 
       &:not(:last-child) {
         margin-bottom: 50px;
@@ -105,7 +113,7 @@
             font-size: 14px;
             font-weight: 500;
             text-align: left;
-            white-space: nowrap;
+            //white-space: nowrap;
             padding: 15px;
             border-bottom: 3px solid var(--black);
             color: var(--white);
