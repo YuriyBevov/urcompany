@@ -1,6 +1,6 @@
 .callback-info {
   @extend .flex-column;
-  padding: 30px;
+  padding: 20px;
 
   background-color: var(--gray);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -11,16 +11,26 @@
 
   &__title {
     font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 20px;
     color: var(--accent);
 
     @include m-b-down(860px) {
       font-size: 18px;
     }
+
+    @include m-b-mobile-lg-down {
+      font-size: 16px;
+    }
   }
 
   &__opener {
+    min-height: 45px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
     &:first-of-type {
       margin-top: auto;
     }

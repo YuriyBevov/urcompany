@@ -3,7 +3,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: auto 350px;
+    grid-template-columns: auto 280px;
     grid-column-gap: 30px;
     grid-row-gap: 50px;
     margin-bottom: 30px;
@@ -158,7 +158,7 @@
 
     .callback-info {
       &:not(:last-of-type) {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         @include m-b-laptop-down {
           margin-bottom: 0;
         }
