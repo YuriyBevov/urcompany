@@ -362,6 +362,9 @@ template {
   --skyblue: #e5eaf0;
   --light: #e0e0e0;
   --gray: #f8f8f8;
+  --danger: #b80003;
+  --darkgray: #3e3e3e;
+  --bg-gray: #f7f7f7;
   --main-bg: var(--white);
   --main-scrollbar-width: 6px;
   --main-scrollbar-color: var(--white);
@@ -538,7 +541,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .main-section__content > ul, .footer-nav__list, .service-info__list, .social__list, .main-nav__list, .head-nav__list-item--multilevel .head-nav__inner-list, .head-nav__list, .header-nav__list {
+.list-reset, .about .examples__list, .about .feature ul, .main-section__content > ul, .footer-nav__list, .service-info__list, .social__list, .main-nav__list, .head-nav__list-item--multilevel .head-nav__inner-list, .head-nav__list, .header-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -582,12 +585,12 @@ a {
 }
 
 /*transitions*/
-.hover-opacity, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener {
+.hover-opacity, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .example-card a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener, .main-btn--bordered {
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
-.hover-opacity:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .hover-opacity:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus {
+.hover-opacity:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .example-card a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .main-btn--bordered:hover, .hover-opacity:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .example-card a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus, .main-btn--bordered:focus {
   opacity: 0.7;
 }
 
@@ -644,6 +647,22 @@ a {
   color: var(--accent);
   background-color: var(--white);
 }
+.main-btn--danger {
+  background-color: var(--danger);
+}
+.main-btn--bordered {
+  position: relative;
+}
+.main-btn--bordered::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  content: "";
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
 
 .lw-container {
   margin: 0 auto;
@@ -655,6 +674,13 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-fluid-width);
+}
+.lw-subtitle {
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--accent);
 }
 .lw-table-container {
   width: 100%;
@@ -1566,6 +1592,43 @@ a {
   }
 }
 
+.example-card {
+  position: relative;
+  padding: 55px 35px;
+  min-height: 160px;
+  background-color: var(--bg-gray);
+}
+.example-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 137px;
+  height: 137px;
+  content: "";
+  background-image: url("../assets/img/example-plate.png");
+}
+.example-card h3 {
+  padding-right: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.example-card p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: var(--darkgray);
+}
+.example-card a {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: var(--accent);
+}
+
 .footer {
   padding: 40px 0;
   background-color: var(--accent);
@@ -1971,6 +2034,109 @@ a {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+}
+
+.about .intro {
+  padding: 50px 0;
+  min-height: 660px;
+  background-image: url("../assets/img/fiz-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about .intro__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: inherit;
+}
+.about .intro__content {
+  margin-top: auto;
+}
+.about .intro__content h1 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.about .intro__content p {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 980px;
+  margin-bottom: 25px;
+  color: var(--white);
+}
+.about .intro__content button {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 25px;
+  max-width: 360px;
+  letter-spacing: 0.02em;
+}
+.about .feature {
+  padding: 100px 0;
+}
+.about .feature h2 {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 700;
+  max-width: 860px;
+  margin-bottom: 40px;
+  color: var(--accent);
+}
+.about .feature ul {
+  position: relative;
+  padding-left: 30px;
+}
+.about .feature ul::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  content: "";
+  background-color: var(--accent);
+}
+.about .feature ul li {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 15px;
+  color: var(--darkgray);
+}
+.about .feature__banner {
+  background-color: var(--bg-gray);
+  padding: 80px 0;
+}
+.about .feature__banner-wrapper {
+  border: 5px solid var(--accent);
+}
+.about .feature__banner p {
+  font-weight: 700;
+  font-size: 48px;
+  max-width: 660px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 80px 0;
+  color: var(--accent);
+}
+.about .examples {
+  padding: 120px 0;
+}
+.about .examples__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 
 /* Модальные окна */

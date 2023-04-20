@@ -1,0 +1,41 @@
+.example-card {
+  position: relative;
+  padding: 55px 35px;
+  min-height: 160px;
+  background-color: var(--bg-gray);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    content: '';
+    background-image: url("../assets/img/example-plate.png");
+  }
+
+  h3 {
+    padding-right: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--darkgray);
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-decoration-line: underline;
+    color: var(--accent);
+
+    @extend .hover-opacity;
+  }
+}

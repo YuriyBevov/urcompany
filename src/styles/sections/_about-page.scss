@@ -1,0 +1,115 @@
+.about {
+  .intro {
+    padding: 50px 0;
+    min-height: 660px;
+
+    background-image: url("../assets/img/fiz-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      min-height: inherit;
+    }
+
+    &__content {
+      margin-top: auto;
+
+      h1 {
+        font-size: 55px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: var(--white);
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 500;
+        max-width: 980px;
+        margin-bottom: 25px;
+        color: var(--white);
+      }
+
+      button {
+        font-size: 20px;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 25px;
+        max-width: 360px;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  .feature {
+    padding: 100px 0;
+    h2 {
+      font-size: 40px;
+      line-height: 1.4;
+      font-weight: 700;
+      max-width: 860px;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+
+    ul {
+      @extend .list-reset;
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        content: '';
+        background-color: var(--accent);
+      }
+
+      li {
+        font-size: 24px;
+        line-height: 1.4;
+        font-weight: 600;
+
+        letter-spacing: -0.01em;
+        margin-bottom: 15px;
+
+        color: var(--darkgray);
+      }
+    }
+
+    &__banner {
+      background-color: var(--bg-gray);
+      padding: 80px 0;
+
+      &-wrapper {
+        border: 5px solid var(--accent);
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 48px;
+        max-width: 660px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 80px 0;
+        color: var(--accent);
+      }
+    }
+  }
+
+  .examples {
+    padding: 120px 0;
+    &__list {
+      @extend .list-reset;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+    }
+  }
+}
