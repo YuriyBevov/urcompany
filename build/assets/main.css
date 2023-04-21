@@ -366,6 +366,7 @@ template {
   --danger: #b80003;
   --darkgray: #3e3e3e;
   --bg-gray: #f7f7f7;
+  --dark: #24282c;
   --main-bg: var(--white);
   --main-scrollbar-width: 6px;
   --main-scrollbar-color: var(--white);
@@ -495,7 +496,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .footer__content .social a, .side-button, .social__list-item a, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a, .main-btn {
+.flex-centered-content, .about .advantages__list li, .about .service__header, .footer__content .social a, .side-button, .social__list-item a, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a, .main-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,7 +528,7 @@ a {
   text-align: center;
 }
 
-.flex-column, .about .advantages__banner, .about .advantages__list li, .footer__content-part--left, .callback-info, .header-worktime__content, .main-nav__section-body .head-nav__list, .main-nav__section-body, .main-nav__section, .burger {
+.flex-column, .about .features__banner, .about .features__list li, .footer__content-part--left, .callback-info, .header-worktime__content, .main-nav__section-body .head-nav__list, .main-nav__section-body, .main-nav__section, .burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,7 +557,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .about .advantages__list, .about .examples__list, .about .feature ul, .main-section__content > ul, .footer-nav__list, .service-info__list, .social__list, .main-nav__list, .head-nav__list-item--multilevel .head-nav__inner-list, .head-nav__list, .header-nav__list {
+.list-reset, .about .advantages__list, .about .service__list, .about .features__list, .about .examples__list, .about .about ul, .main-section__content > ul, .footer-nav__list, .service-info__list, .social__list, .main-nav__list, .head-nav__list-item--multilevel .head-nav__inner-list, .head-nav__list, .header-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -600,12 +601,12 @@ a {
 }
 
 /*transitions*/
-.hover-opacity, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .example-card a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener, .main-btn--bordered {
+.hover-opacity, .about .features__banner button, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .example-card a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener, .main-btn--bordered {
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
-.hover-opacity:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .example-card a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .main-btn--bordered:hover, .hover-opacity:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .example-card a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus, .main-btn--bordered:focus {
+.hover-opacity:hover, .about .features__banner button:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .example-card a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .main-btn--bordered:hover, .hover-opacity:focus, .about .features__banner button:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .example-card a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus, .main-btn--bordered:focus {
   opacity: 0.7;
 }
 
@@ -691,7 +692,10 @@ a {
   max-width: var(--container-fluid-width);
 }
 .lw-subtitle {
+  display: inline-block;
+  width: 100%;
   font-size: 48px;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 50px;
@@ -2094,10 +2098,10 @@ a {
   max-width: 360px;
   letter-spacing: 0.02em;
 }
-.about .feature {
+.about .about {
   padding: 60px 0;
 }
-.about .feature h2 {
+.about .about h2 {
   font-size: 40px;
   line-height: 1.4;
   font-weight: 700;
@@ -2105,12 +2109,12 @@ a {
   margin-bottom: 40px;
   color: var(--accent);
 }
-.about .feature ul {
+.about .about ul {
   position: relative;
   padding-left: 30px;
   margin-bottom: 100px;
 }
-.about .feature ul::before {
+.about .about ul::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -2119,7 +2123,7 @@ a {
   content: "";
   background-color: var(--accent);
 }
-.about .feature ul li {
+.about .about ul li {
   font-size: 24px;
   line-height: 1.4;
   font-weight: 600;
@@ -2127,14 +2131,14 @@ a {
   margin-bottom: 15px;
   color: var(--darkgray);
 }
-.about .feature__banner {
+.about .about__banner {
   background-color: var(--bg-gray);
   padding: 80px 0;
 }
-.about .feature__banner-wrapper {
+.about .about__banner-wrapper {
   border: 5px solid var(--accent);
 }
-.about .feature__banner p {
+.about .about__banner p {
   font-weight: 700;
   font-size: 48px;
   max-width: 660px;
@@ -2154,10 +2158,10 @@ a {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
 }
-.about .advantages {
+.about .features {
   padding: 60px 0;
 }
-.about .advantages__list {
+.about .features__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
@@ -2166,34 +2170,34 @@ a {
   grid-row-gap: 25px;
   margin-bottom: 80px;
 }
-.about .advantages__list li {
+.about .features__list li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding: 10px 0;
 }
-.about .advantages__list li img {
+.about .features__list li img {
   width: 100%;
-  max-width: 125px;
+  max-width: 90px;
   height: 100%;
-  max-height: 125px;
+  max-height: 90px;
   -o-object-fit: contain;
   object-fit: contain;
   margin-bottom: 20px;
 }
-.about .advantages__list li p {
+.about .features__list li p {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
   color: var(--darkgray);
 }
-.about .advantages__banner {
+.about .features__banner {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--accent);
 }
-.about .advantages__banner-text {
+.about .features__banner-text {
   display: inline-block;
   font-family: var(--secondary-font);
   font-size: 64px;
@@ -2202,13 +2206,13 @@ a {
   color: var(--white);
   text-align: center;
 }
-.about .advantages__banner span {
+.about .features__banner span {
   display: inline-block;
   font-size: 20px;
   margin-bottom: 40px;
   color: var(--light);
 }
-.about .advantages__banner button {
+.about .features__banner button {
   max-width: 300px;
   margin-bottom: 60px;
   font-size: 20px;
@@ -2216,6 +2220,82 @@ a {
   color: var(--accent);
   text-transform: uppercase;
   background-color: var(--light);
+}
+.about .service__header {
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about .service__header h2 {
+  font-size: 28px;
+  color: var(--white);
+}
+.about .service__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-bottom: 40px;
+}
+.about .service__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 18px;
+  min-height: 80px;
+  color: var(--accent);
+  background-color: var(--light);
+}
+.about .service__list li:nth-child(4n),
+.about .service__list li:nth-child(4n+3) {
+  border: 1px solid var(--light);
+  background-color: transparent;
+}
+.about .advantages {
+  padding: 60px 0;
+  background-color: var(--bg-gray);
+}
+.about .advantages .lw-subtitle {
+  padding: 0 100px;
+}
+.about .advantages .lw-subtitle span {
+  color: var(--dark);
+}
+.about .advantages__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20px;
+}
+.about .advantages__list li {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  min-height: 260px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-color: transparent;
+  background-color: var(--accent);
+  color: var(--white);
+}
+.about .advantages__list li:nth-child(2),
+.about .advantages__list li:nth-child(4),
+.about .advantages__list li:nth-child(5),
+.about .advantages__list li:nth-child(7) {
+  border-color: var(--light);
+  background-color: var(--white);
+  color: var(--dark);
 }
 
 /* Модальные окна */
