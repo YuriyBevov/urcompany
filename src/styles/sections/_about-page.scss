@@ -45,7 +45,7 @@
   }
 
   .feature {
-    padding: 100px 0;
+    padding: 60px 0;
     h2 {
       font-size: 40px;
       line-height: 1.4;
@@ -59,6 +59,7 @@
       @extend .list-reset;
       position: relative;
       padding-left: 30px;
+      margin-bottom: 100px;
 
       &::before {
         position: absolute;
@@ -103,13 +104,81 @@
   }
 
   .examples {
-    padding: 120px 0;
+    padding: 60px 0;
     &__list {
       @extend .list-reset;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 40px;
       grid-row-gap: 40px;
+    }
+  }
+
+  .advantages {
+    padding: 60px 0;
+    &__list {
+      @extend .list-reset;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 25px;
+      margin-bottom: 80px;
+
+      li {
+        @extend .flex-column;
+        align-items: center;
+
+        padding: 10px 0;
+
+        img {
+          width: 100%;
+          max-width: 125px;
+          height: 100%;
+          max-height: 125px;
+          object-fit: contain;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+          color: var(--darkgray);
+        }
+      }
+    }
+
+    &__banner {
+      @extend .flex-column;
+      align-items: center;
+      background-color: var(--accent);
+
+      &-text {
+        display: inline-block;
+        font-family: var(--secondary-font);
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--white);
+        text-align: center;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: var(--light);
+      }
+
+      button {
+        max-width: 300px;
+        margin-bottom: 60px;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        background-color: var(--light);
+      }
     }
   }
 }
