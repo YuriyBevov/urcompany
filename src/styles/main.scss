@@ -9,8 +9,6 @@
 
 /* Компоненты */
 
-
-
 @import "./components/header.scss";
 @import "./components/burger.scss";
 @import "./components/header-nav.scss";
@@ -23,7 +21,8 @@
 @import "./components/callback-info.scss";
 @import "./components/service-info.scss";
 @import "./components/side-buttons.scss";
-@import "./components/example-card.scss";
+
+@import "./components/bordered-banner.scss";
 
 @import "./components/footer.scss";
 @import "./components/footer-nav.scss";
@@ -31,7 +30,16 @@
 /* Секции */
 
 @import "./sections/main-section.scss";
-@import "./sections/about-page.scss";
+/*about-page*/
+@import "./sections/about-page/intro-section.scss";
+@import "./sections/about-page/about-section.scss";
+@import "./sections/about-page/portfolio-section.scss";
+@import "./sections/about-page/features-section.scss";
+@import "./sections/about-page/services-section.scss";
+@import "./sections/about-page/advantages-section.scss";
+@import "./sections/about-page/reviews-section.scss";
+@import "./sections/about-page/stuff-section.scss";
+/*about-page-end*/
 /* Модальные окна */
 
 

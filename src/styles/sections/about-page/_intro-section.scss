@@ -1,0 +1,83 @@
+.intro-section {
+  @extend .lw-section-offset;
+
+  min-height: 660px;
+  background-image: url("../assets/img/fiz-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  @include m-b-tablet-down {
+    min-height: 480px;
+  }
+
+  @include m-b-mobile-lg-down {
+    min-height: 320px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+  }
+
+  &__content {
+    margin-top: auto;
+
+    h1 {
+      font-size: 55px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--white);
+
+      @include m-b-mobile-lg-down {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 500;
+      max-width: 980px;
+      margin-bottom: 60px;
+      color: var(--white);
+
+      @include m-b-tablet-lg-down {
+        font-size: 20px;
+        max-width: 720px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
+        max-width: 480px;
+        margin-bottom: 40px;
+      }
+    }
+
+    button {
+      font-size: 20px;
+      text-transform: uppercase;
+      width: 100%;
+      padding: 25px;
+      max-width: 360px;
+      letter-spacing: 0.02em;
+      margin-bottom: 50px;
+      margin-left: 13px;
+
+      @include m-b-tablet-lg-down {
+        padding: 15px;
+        font-size: 18px;
+        max-width: 280px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding: 10px;
+        font-size: 16px;
+        min-height: 50px;
+        max-width: 240px;
+      }
+    }
+  }
+}

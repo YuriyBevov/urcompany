@@ -1,0 +1,150 @@
+.features-section {
+  @extend .lw-section-offset;
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+    margin-bottom: 80px;
+
+    @include m-b-tablet-lg-down {
+      margin-bottom: 60px;
+    }
+
+    @include m-b-tablet-down {
+      display: flex;
+      flex-wrap: wrap;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    li {
+      @extend .flex-column;
+      align-items: center;
+
+      padding: 10px 0;
+
+      img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        margin-bottom: 30px;
+
+        @include m-b-tablet-lg-down {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+        color: var(--darkgray);
+
+        @include m-b-tablet-lg-down {
+          font-size: 18px;
+        }
+
+        @include m-b-down(480px) {
+          font-size: 16px;
+        }
+      }
+
+      @include m-b-tablet-down {
+        display: flex;
+        padding: 20px 0;
+        width: calc(100% / 3);
+      }
+
+      @include m-b-mobile-lg-down {
+        width: 100%;
+      }
+    }
+  }
+
+  &__banner {
+    @extend .flex-column;
+    align-items: center;
+    padding: 60px;
+    background-color: var(--accent);
+
+    @include m-b-tablet-down {
+      padding: 40px 20px;
+    }
+
+    @include m-b-down(480px) {
+      padding: 20px 10px;
+    }
+
+    &-text {
+      display: inline-block;
+      font-family: var(--secondary-font);
+      font-size: 64px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 30px;
+      color: var(--white);
+      text-align: center;
+
+      @include m-b-tablet-lg-down {
+        font-size: 48px;
+      }
+
+      @include m-b-tablet-down {
+        font-size: 36px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      @include m-b-down(480px) {
+        font-size: 22px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-size: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: var(--light);
+
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    button {
+      max-width: 300px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      background-color: var(--light);
+
+      @extend .hover-opacity;
+
+      @include m-b-tablet-down {
+        min-height: 50px;
+        font-size: 18px;
+      }
+
+      @include m-b-mobile-lg-down {
+        max-width: 240px;
+        padding: 15px;
+        font-size: 16px;
+      }
+    }
+  }
+}
