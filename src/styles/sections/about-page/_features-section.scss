@@ -4,10 +4,12 @@
   &__list {
     @extend .list-reset;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /*grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
-    grid-row-gap: 25px;
+    grid-row-gap: 25px;*/
     margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
 
     @include m-b-tablet-lg-down {
       margin-bottom: 60px;
@@ -26,7 +28,8 @@
     li {
       @extend .flex-column;
       align-items: center;
-
+      flex-grow: 1;
+      max-width: 240px;
       padding: 10px 0;
 
       img {

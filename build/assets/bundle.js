@@ -1,6 +1,30 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scripts/modules/audio.js":
+/*!**************************************!*\
+  !*** ./src/scripts/modules/audio.js ***!
+  \**************************************/
+/***/ (() => {
+
+var playBtn = document.querySelector('.audio-play-btn');
+
+var onClickPlayAudio = function onClickPlayAudio(evt) {
+  var target = evt.currentTarget;
+  var track = target.nextElementSibling;
+
+  if (target.classList.contains('active')) {
+    target.classList.remove('active');
+    track.pause();
+  } else {
+    target.classList.add('active');
+    track.play();
+  }
+};
+
+playBtn.addEventListener('click', onClickPlayAudio);
+
+/***/ }),
 
 /***/ "./src/scripts/modules/main-nav.js":
 /*!*****************************************!*\
@@ -8,6 +32,7 @@
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
@@ -131,6 +156,7 @@ if (innerOpeners) {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CSSPlugin": () => (/* binding */ CSSPlugin),
@@ -1700,6 +1726,7 @@ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(CSSPlugin);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Animation": () => (/* binding */ Animation),
@@ -6234,6 +6261,7 @@ var Power0 = _easeMap.Power0,
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Back": () => (/* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Back),
@@ -6300,6 +6328,18 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -6330,13 +6370,17 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/main-nav */ "./src/scripts/modules/main-nav.js");
+/* harmony import */ var _modules_audio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audio */ "./src/scripts/modules/audio.js");
+/* harmony import */ var _modules_audio__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_audio__WEBPACK_IMPORTED_MODULE_1__);
+
 
 })();
 
