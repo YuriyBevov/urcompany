@@ -59,22 +59,19 @@
     }
 
     li {
+      @extend .flex-wrap;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 18px;
+      min-height: 80px;
+      color: var(--accent);
       background-color: var(--light);
+      @extend .hover-opacity;
 
-      a {
-        @extend .flex-centered-content;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 18px;
-        min-height: 80px;
-        color: var(--accent);
-
-        @extend .hover-opacity;
-
-        @include m-b-mobile-lg-down {
-          font-size: 16px;
-          min-height: 40px;
-        }
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
+        min-height: 40px;
       }
     }
 
@@ -94,4 +91,10 @@
       }
     }
   }
+}
+
+.text-bordered-banner {
+  border: 2px solid var(--dark);
+  padding: 15px;
+  font-size: 24px;
 }

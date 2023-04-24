@@ -107,25 +107,6 @@
   }
 }
 
-/*container*/
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
-
-  @include m-b-desktop-lg-down {
-    padding: 0 30px;
-  }
-
-  @include m-b-tablet-down {
-    padding: 0 20px;
-  }
-
-  @include m-b-mobile-lg-down {
-    padding: 0 15px;
-  }
-}
-
 /*btns*/
 
 .main-btn {
