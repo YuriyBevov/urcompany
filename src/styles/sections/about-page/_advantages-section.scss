@@ -1,5 +1,6 @@
 .advantages-section {
   @extend .lw-section-offset;
+  padding-bottom: 60px;
   background-color: var(--bg-gray);
 
   .lw-subtitle {
@@ -30,13 +31,19 @@
       padding: 20px;
       min-height: 260px;
       text-align: center;
-      border: 1px solid transparent;
-      border-color: transparent;
-      background-color: var(--accent);
-      color: var(--white);
+      background-color: var(--light);
+      color: var(--dark);
 
       @include m-b-down(640px) {
         min-height: 200px;
+      }
+
+      transition: background-color var(--main-transition), color var(--main-transition);
+
+      &:hover,
+      &:focus {
+        background-color: var(--accent) !important;
+        color: var(--white) !important;
       }
     }
 
@@ -45,7 +52,6 @@
       li:nth-child(4),
       li:nth-child(5),
       li:nth-child(8) {
-        border-color: var(--light);
         background-color: var(--white);
         color: var(--dark);
       }
@@ -54,16 +60,14 @@
     @include m-b-up(1141px) {
       li:nth-child(1),
       li:nth-child(8) {
-        border-color: transparent;
-        color: var(--white);
-        background-color: var(--accent);
+        color: var(--dark);
+        background-color: var(--light);
       }
 
       li:nth-child(2),
       li:nth-child(4),
       li:nth-child(5),
       li:nth-child(7) {
-        border-color: var(--light);
         background-color: var(--white);
         color: var(--dark);
       }
@@ -71,7 +75,6 @@
 
     @include m-b-down(640px) {
       li:nth-child(even) {
-        border-color: var(--light);
         background-color: var(--white);
         color: var(--dark);
       }

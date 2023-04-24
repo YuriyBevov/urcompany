@@ -496,7 +496,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .stuff-card__header, .audio-review__body-btn, .advantages-section__list li, .service-block__list li, .service-block__header, .footer__content .social a, .side-button, .social__list-item a, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a, .main-btn {
+.flex-centered-content, .stuff-card__header, .audio-review__body-btn, .advantages-section__list li, .service-block__list li a, .service-block__header, .footer__content .social a, .side-button, .social__list-item a, .search__opener, .main-nav-inner-list-opener, .main-nav-closer, .main-nav-back, .header-nav__list-item a, .main-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,12 +601,12 @@ a {
 }
 
 /*transitions*/
-.hover-opacity, .features-section__banner button, .portfolio-section__card a, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener, .main-btn--bordered {
+.hover-opacity, .service-block__list li a, .service-block__header, .features-section__banner button, .portfolio-section__card a, .main-section__content > ul li a, .footer-nav__list-item a, .footer__bottom-part a, .callback-info__opener, .social__list-item, .contacts__field a, .search__opener, .main-btn--bordered {
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
-.hover-opacity:hover, .features-section__banner button:hover, .portfolio-section__card a:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .main-btn--bordered:hover, .hover-opacity:focus, .features-section__banner button:focus, .portfolio-section__card a:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus, .main-btn--bordered:focus {
+.hover-opacity:hover, .service-block__list li a:hover, .service-block__header:hover, .features-section__banner button:hover, .portfolio-section__card a:hover, .main-section__content > ul li a:hover, .footer-nav__list-item a:hover, .footer__bottom-part a:hover, .callback-info__opener:hover, .social__list-item:hover, .contacts__field a:hover, .search__opener:hover, .main-btn--bordered:hover, .hover-opacity:focus, .service-block__list li a:focus, .service-block__header:focus, .features-section__banner button:focus, .portfolio-section__card a:focus, .main-section__content > ul li a:focus, .footer-nav__list-item a:focus, .footer__bottom-part a:focus, .callback-info__opener:focus, .social__list-item:focus, .contacts__field a:focus, .search__opener:focus, .main-btn--bordered:focus {
   opacity: 0.7;
 }
 
@@ -2614,15 +2614,17 @@ a {
   }
 }
 .service-block__list li {
+  background-color: var(--light);
+}
+.service-block__list li a {
   font-size: 18px;
   font-weight: 500;
   padding: 18px;
   min-height: 80px;
   color: var(--accent);
-  background-color: var(--light);
 }
 @media (max-width: 533px) {
-  .service-block__list li {
+  .service-block__list li a {
     font-size: 16px;
     min-height: 40px;
   }
@@ -2642,6 +2644,7 @@ a {
 }
 
 .advantages-section {
+  padding-bottom: 60px;
   background-color: var(--bg-gray);
 }
 .advantages-section .lw-subtitle span {
@@ -2672,22 +2675,26 @@ a {
   padding: 20px;
   min-height: 260px;
   text-align: center;
-  border: 1px solid transparent;
-  border-color: transparent;
-  background-color: var(--accent);
-  color: var(--white);
+  background-color: var(--light);
+  color: var(--dark);
+  -webkit-transition: background-color var(--main-transition), color var(--main-transition);
+  -o-transition: background-color var(--main-transition), color var(--main-transition);
+  transition: background-color var(--main-transition), color var(--main-transition);
 }
 @media (max-width: 640px) {
   .advantages-section__list li {
     min-height: 200px;
   }
 }
+.advantages-section__list li:hover, .advantages-section__list li:focus {
+  background-color: var(--accent) !important;
+  color: var(--white) !important;
+}
 @media (min-width: 639px) {
   .advantages-section__list li:nth-child(1),
 .advantages-section__list li:nth-child(4),
 .advantages-section__list li:nth-child(5),
 .advantages-section__list li:nth-child(8) {
-    border-color: var(--light);
     background-color: var(--white);
     color: var(--dark);
   }
@@ -2695,22 +2702,19 @@ a {
 @media (min-width: 1141px) {
   .advantages-section__list li:nth-child(1),
 .advantages-section__list li:nth-child(8) {
-    border-color: transparent;
-    color: var(--white);
-    background-color: var(--accent);
+    color: var(--dark);
+    background-color: var(--light);
   }
   .advantages-section__list li:nth-child(2),
 .advantages-section__list li:nth-child(4),
 .advantages-section__list li:nth-child(5),
 .advantages-section__list li:nth-child(7) {
-    border-color: var(--light);
     background-color: var(--white);
     color: var(--dark);
   }
 }
 @media (max-width: 640px) {
   .advantages-section__list li:nth-child(even) {
-    border-color: var(--light);
     background-color: var(--white);
     color: var(--dark);
   }
