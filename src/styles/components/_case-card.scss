@@ -1,0 +1,92 @@
+.case-card {
+  position: relative;
+  padding: 25px;
+  background-color: var(--gray);
+
+  @include m-b-down(420px) {
+    padding: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 135px;
+    height: 135px;
+    content: '';
+    background-image: url("../assets/img/example-plate.png");
+    background-size: contain;
+
+    @include m-b-mobile-lg-down {
+      top: -8px;
+      right: -8px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &__judgment {
+    position: absolute;
+    top: 23px;
+    right: -23px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+
+    width: 120px;
+    height: auto;
+
+    color: var(--white);
+
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+
+    @include m-b-mobile-lg-down {
+      top: 15px;
+      right: -25px;
+      font-size: 8px;
+      width: 100px;
+    }
+  }
+
+  &__header {
+    padding-right: 50px;
+    border-bottom: 1px solid var(--accent);
+
+    h2 {
+      margin-top: 0;
+      font-size: 26px;
+      font-weight: 500;
+
+      @include m-b-down(420px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__body {
+    font-weight: 500;
+    font-size: 18px;
+
+    @include m-b-down(420px) {
+      font-size: 16px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      font-weight: 500;
+      color: var(--accent);
+
+      @extend .hover-opacity;
+    }
+
+    & > a {
+      text-decoration: underline;
+    }
+  }
+}

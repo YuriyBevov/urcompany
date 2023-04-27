@@ -1,0 +1,33 @@
+.cases-section {
+  @extend .lw-section-offset;
+
+  &__title {
+
+    color: var(--dark);
+
+    span {
+      color: var(--accent);
+    }
+  }
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-bottom: 80px;
+
+    @include m-b-laptop-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m-b-tablet-down {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+
+    }
+  }
+}

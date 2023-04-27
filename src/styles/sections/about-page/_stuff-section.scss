@@ -33,6 +33,10 @@
       padding: 20px;
     }
 
+    &.hidden {
+      display: none;
+    }
+
     @include m-b-mobile-lg-up {
       width: calc(50% - 30px);
       &--logo {

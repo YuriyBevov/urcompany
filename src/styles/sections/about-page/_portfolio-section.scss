@@ -40,8 +40,8 @@
 
     &::after {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -12px;
+      right: -12px;
       width: 135px;
       height: 135px;
       content: '';
@@ -49,6 +49,8 @@
       background-size: contain;
 
       @include m-b-tablet-down {
+        top: -8px;
+        right: -8px;
         width: 90px;
         height: 90px;
       }
