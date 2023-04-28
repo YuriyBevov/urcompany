@@ -3,16 +3,26 @@
 
   min-height: 660px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 
+  background-image: url('../assets/img/fiz-serv.jpg');
+
+  @include m-b-laptop-down {
+    min-height: 460px;
+  }
+
+
+  @include m-b-tablet-lg-down {
+    min-height: 400px;
+  }
 
   @include m-b-tablet-down {
-    min-height: 480px;
+    min-height: 360px;
   }
 
   @include m-b-mobile-lg-down {
-    min-height: 320px;
+    min-height: 220px;
   }
 
   &__container {
@@ -30,8 +40,17 @@
       letter-spacing: 0.02em;
       color: var(--white);
 
+      @include m-b-laptop-down {
+        font-size: 44px;
+        margin-bottom: 10px;
+      }
+
+      @include m-b-tablet-lg-down {
+        font-size: 36px;
+      }
+
       @include m-b-mobile-lg-down {
-        font-size: 28px;
+        font-size: 20px;
       }
     }
 
@@ -40,18 +59,30 @@
       line-height: 1.5;
       font-weight: 500;
       max-width: 980px;
+      margin: 0;
       margin-bottom: 60px;
       color: var(--white);
+
+      @include m-b-laptop-down {
+        font-size: 20px;
+        max-width: 720px;
+        margin-bottom: 30px;
+      }
 
       @include m-b-tablet-lg-down {
         font-size: 20px;
         max-width: 720px;
       }
 
+      @include m-b-tablet-lg-down {
+        font-size: 18px;
+        max-width: 600px;
+      }
+
       @include m-b-mobile-lg-down {
-        font-size: 16px;
+        font-size: 12px;
         max-width: 480px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
       }
     }
 
@@ -65,17 +96,31 @@
       margin-bottom: 50px;
       margin-left: 13px;
 
+      @include m-b-laptop-down {
+        padding: 20px;
+      }
+
       @include m-b-tablet-lg-down {
         padding: 15px;
         font-size: 18px;
         max-width: 280px;
       }
 
+      @include m-b-tablet-lg-down {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 25px;
+        &::before {
+          display: none;
+        }
+      }
+
       @include m-b-mobile-lg-down {
         padding: 10px;
         font-size: 16px;
-        min-height: 50px;
+        min-height: 40px;
         max-width: 240px;
+        margin-bottom: 10px;
       }
     }
   }

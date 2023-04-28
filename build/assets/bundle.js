@@ -173,7 +173,7 @@ if (stuffSwiper) {
   function instance() {
     return new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](stuffSwiper, {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".stuff-swiper-button-next",
         prevEl: ".stuff-swiper-button-prev"
@@ -206,16 +206,13 @@ if (stuffSwiper) {
 
   window.addEventListener('resize', function () {
     if (window.innerWidth < 769 && !isActive) {
-      console.log('init swiper');
       stuffSwiper.querySelector('.stuff-section__list').classList.add('swiper-wrapper');
       isActive = true;
       swiper = instance();
     }
 
     if (window.innerWidth > 768 && isActive) {
-      console.log('destroy swiper');
       isActive = false;
-      swiper.update();
       swiper.destroy(true, true);
     }
   });

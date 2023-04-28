@@ -3025,17 +3025,28 @@ a {
 .intro-section {
   min-height: 660px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
+  background-image: url("../assets/img/fiz-serv.jpg");
+}
+@media (max-width: 1023px) {
+  .intro-section {
+    min-height: 460px;
+  }
+}
+@media (max-width: 959px) {
+  .intro-section {
+    min-height: 400px;
+  }
 }
 @media (max-width: 767px) {
   .intro-section {
-    min-height: 480px;
+    min-height: 360px;
   }
 }
 @media (max-width: 533px) {
   .intro-section {
-    min-height: 320px;
+    min-height: 220px;
   }
 }
 .intro-section__container {
@@ -3057,9 +3068,20 @@ a {
   letter-spacing: 0.02em;
   color: var(--white);
 }
+@media (max-width: 1023px) {
+  .intro-section__content h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 959px) {
+  .intro-section__content h1 {
+    font-size: 36px;
+  }
+}
 @media (max-width: 533px) {
   .intro-section__content h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 .intro-section__content p {
@@ -3067,8 +3089,16 @@ a {
   line-height: 1.5;
   font-weight: 500;
   max-width: 980px;
+  margin: 0;
   margin-bottom: 60px;
   color: var(--white);
+}
+@media (max-width: 1023px) {
+  .intro-section__content p {
+    font-size: 20px;
+    max-width: 720px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 959px) {
   .intro-section__content p {
@@ -3076,11 +3106,17 @@ a {
     max-width: 720px;
   }
 }
+@media (max-width: 959px) {
+  .intro-section__content p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+}
 @media (max-width: 533px) {
   .intro-section__content p {
-    font-size: 16px;
+    font-size: 12px;
     max-width: 480px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
 .intro-section__content button {
@@ -3093,6 +3129,11 @@ a {
   margin-bottom: 50px;
   margin-left: 13px;
 }
+@media (max-width: 1023px) {
+  .intro-section__content button {
+    padding: 20px;
+  }
+}
 @media (max-width: 959px) {
   .intro-section__content button {
     padding: 15px;
@@ -3100,12 +3141,23 @@ a {
     max-width: 280px;
   }
 }
+@media (max-width: 959px) {
+  .intro-section__content button {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .intro-section__content button::before {
+    display: none;
+  }
+}
 @media (max-width: 533px) {
   .intro-section__content button {
     padding: 10px;
     font-size: 16px;
-    min-height: 50px;
+    min-height: 40px;
     max-width: 240px;
+    margin-bottom: 10px;
   }
 }
 

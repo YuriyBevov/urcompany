@@ -14,7 +14,7 @@ if(stuffSwiper) {
     function instance() {
       return new Swiper(stuffSwiper, {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
 
         navigation: {
           nextEl: ".stuff-swiper-button-next",
@@ -49,16 +49,13 @@ if(stuffSwiper) {
 
     window.addEventListener('resize', () => {
       if(window.innerWidth < 769 && !isActive) {
-        console.log('init swiper')
         stuffSwiper.querySelector('.stuff-section__list').classList.add('swiper-wrapper');
         isActive = true;
         swiper = instance();
       }
 
       if(window.innerWidth > 768 && isActive) {
-        console.log('destroy swiper');
         isActive = false;
-        swiper.update();
         swiper.destroy(true, true);
       }
     })
