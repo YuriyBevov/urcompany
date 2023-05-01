@@ -166,7 +166,6 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 var stuffSwiper = document.querySelector('.stuff-swiper');
 
 if (stuffSwiper) {
-  console.log('stuff');
   var isActive = true;
   var swiper = instance();
 

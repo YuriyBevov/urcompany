@@ -5,8 +5,6 @@ Swiper.use([Navigation]);
 const stuffSwiper = document.querySelector('.stuff-swiper');
 
 if(stuffSwiper) {
-  console.log('stuff');
-
     let isActive = true;
 
     let swiper = instance();

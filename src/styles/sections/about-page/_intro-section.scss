@@ -10,19 +10,22 @@
 
   @include m-b-laptop-down {
     min-height: 460px;
+    background-image: url('../assets/img/fiz-serv-tablet-lg.jpg');
   }
-
 
   @include m-b-tablet-lg-down {
     min-height: 400px;
+    background-image: url('../assets/img/fiz-serv-tablet.jpg');
   }
 
   @include m-b-tablet-down {
     min-height: 360px;
+    background-image: url('../assets/img/fiz-serv-mobile-lg.jpg');
   }
 
   @include m-b-mobile-lg-down {
     min-height: 220px;
+    background-image: url('../assets/img/fiz-serv-mobile.jpg');
   }
 
   &__container {
@@ -41,12 +44,12 @@
       color: var(--white);
 
       @include m-b-laptop-down {
-        font-size: 44px;
+        font-size: 40px;
         margin-bottom: 10px;
       }
 
       @include m-b-tablet-lg-down {
-        font-size: 36px;
+        font-size: 32px;
       }
 
       @include m-b-mobile-lg-down {
