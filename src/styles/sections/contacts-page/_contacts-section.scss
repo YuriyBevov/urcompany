@@ -1,28 +1,33 @@
 .contacts-section {
   padding-bottom: 70px;
+
   @include m-b-tablet-down {
     padding-bottom: 0;
   }
-    &__list {
-        @extend .list-reset;
-        display: flex;
-        align-items: center;
-        padding: 50px 0;
-        div {
-            display: block;
-            width: 3px;
-            height: 3px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            background: #05376c;
-            margin: 0 4px;
-        }
-    }
-    h2 {
-        display: flex;
-        justify-content: flex-start;
-    }
+
+  &__list {
+      @extend .list-reset;
+      display: flex;
+      align-items: center;
+      padding: 50px 0;
+
+      div {
+          display: block;
+          width: 3px;
+          height: 3px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background: #05376c;
+          margin: 0 4px;
+      }
+  }
+
+  h2 {
+      display: flex;
+      justify-content: flex-start;
+  }
+
    &__maps {
     position: relative;
         &-adress {

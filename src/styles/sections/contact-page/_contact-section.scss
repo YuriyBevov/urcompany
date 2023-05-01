@@ -1,0 +1,135 @@
+.contact-section {
+  @extend .lw-section-offset;
+
+  &__map {
+    position: relative;
+
+    @include m-b-tablet-lg-down {
+      display: flex;
+      flex-direction: column;
+
+      iframe {
+        order: 2;
+      }
+    }
+  }
+
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--white);
+
+    @include m-b-tablet-lg-down {
+      position: static;
+      order: 1;
+      margin-bottom: 40px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      max-width: 100%;
+    }
+
+    @include m-b-tablet-down {
+      padding: 15px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    @include m-b-mobile-lg-down {
+      grid-template-columns: 1fr;
+      grid-row-gap: 25px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 35px;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      fill: var(--accent);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include m-b-tablet-lg-down {
+        margin-bottom: 0;
+      }
+    }
+
+    &-content {
+      @extend .flex-column;
+
+      & > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+    }
+
+    @include m-b-tablet-lg-down {
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(4) {
+        order: 4
+      }
+    }
+  }
+
+
+}
+
+.checkbox-custom {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--accent);
+      content: '';
+
+      background-color: var(--white);
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+
+    background-image: url("../assets/img/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.contact-section__btn {
+  max-width: 200px;
+  @extend .hover-opacity;
+}

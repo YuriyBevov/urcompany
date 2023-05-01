@@ -1,0 +1,67 @@
+<section class="lw-section contact-section">
+  <div class="lw-container contact-section__container">
+    <h1 class="lw-title">Контакты</h1>
+
+    <div class="contact-section__map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa90bb66fd4ab373038d9eb72e7dbf7b0d51b87af87e3782b4085499f8a5432c5&source=constructor" width="100%" height="400" frameborder="0"></iframe>
+
+      <ul class="contact-section__list">
+        <li class="contact-section__list-item">
+          <svg width="25" height="25">
+            <use xlink:href="./assets/sprite.svg#icon-location"></use>
+          </svg>
+          <div class="contact-section__list-item-content">
+            <span>Наш адрес:</span>
+
+            @include('../../components/address.html')
+          </div>
+        </li>
+
+        <li class="contact-section__list-item">
+          <svg width="25" height="25">
+            <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+          </svg>
+          <div class="contact-section__list-item-content">
+            <span>Наш телефоны:</span>
+
+            @include('../../components/phones.html')
+          </div>
+        </li>
+
+        <li class="contact-section__list-item">
+          <svg width="25" height="25">
+            <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+          </svg>
+          <div class="contact-section__list-item-content">
+            <span>Для обращений:</span>
+
+            @include('../../components/email.html')
+          </div>
+        </li>
+
+        <li class="contact-section__list-item">
+          <svg width="25" height="25">
+            <use xlink:href="./assets/sprite.svg#icon-clock"></use>
+          </svg>
+          <div class="contact-section__list-item-content">
+            <span>Время работы:</span>
+
+            @include('../../components/worktime.html')
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="checkbox-custom">
+    <input type="checkbox" id="mail2">
+    <label for="mail2">
+      Нажимая кнопку «Заказать», я даю свое согласие на обработку
+      моих персональных данных, в соответствии с Федеральным законом
+      от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях
+      и для целей, определенных в Согласии на обработку персональных данных
+    </label>
+
+    <button class="main-btn contact-section__btn">Скачать презентацию</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+.contact-mail {
+  @extend .flex-column;
+  padding-right: 10px;
+  a {
+    @extend .hover-opacity;
+    font-weight: 500;
+    font-size: 18px;
+
+    color: var(--accent);
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 16px;
+    }
+  }
+}
