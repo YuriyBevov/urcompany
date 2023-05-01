@@ -444,8 +444,8 @@
            <form class="form" action="">
             <div class="form__input">
               <div>
-                <input placeholder="" type="text">
-                <label for="">Как вас зовут</label>
+                <input placeholder="" type="text" id="name" name="name">
+                <label for="name">Как вас зовут</label>
              </div>
              <div>
                 <input placeholder="" type="tel">
@@ -454,7 +454,8 @@
             </div>
               <input class="form__button" type="submit" value="Связаться с нами">
               <div class="form__checkbox">
-              <input type="checkbox"/>
+              <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
+              <label for="happy"></label>
               <span>
                   Нажимая кнопку «Заказать», я даю свое согласие на обработку 
                   моих персональных данных, в соответствии с Федеральным законом
@@ -489,7 +490,8 @@
                  <input class="form__button" type="submit" value="Подпишитесь">
                </div>
                  <div class="form__checkbox">
-                  <input type="checkbox">
+                  <input type="checkbox" class="custom-checkbox" id="mail" name="mail" value="yes">
+                  <label for="mail"></label>
                   <span>
                       Нажимая кнопку «Заказать», я даю свое согласие на обработку 
                       моих персональных данных, в соответствии с Федеральным законом
