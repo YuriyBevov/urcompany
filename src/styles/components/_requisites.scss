@@ -1,0 +1,47 @@
+.requisites{
+    @extend .flex-column;
+    padding-right: 10px;
+    gap: 10px;
+
+    @include m-b-tablet-lg-down {
+      flex-direction: row;
+    }
+    @include m-b-tablet-down {
+      flex-direction: column;
+    }
+    div {
+      @extend .flex-column;
+      gap: 10px;
+
+    }
+    span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--accent);
+        @include m-b-tablet-lg-down {
+          font-size: 18px;
+        }
+        
+        @include m-b-mobile-lg-down {
+          font-size: 14px;
+        }
+
+  
+        & > span {
+            display: inline-block;
+            font-style: normal;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--dark);
+
+            @include m-b-mobile-lg-down {
+              font-size: 12px;
+            }
+        }
+      }
+  }
+  

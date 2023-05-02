@@ -7,13 +7,11 @@
   \**************************************/
 /***/ (() => {
 
-var playBtn = document.querySelector('.audio-play-btn');
-
+const playBtn = document.querySelector('.audio-play-btn');
 if (playBtn) {
-  var onClickPlayAudio = function onClickPlayAudio(evt) {
-    var target = evt.currentTarget;
-    var track = target.nextElementSibling;
-
+  const onClickPlayAudio = evt => {
+    const target = evt.currentTarget;
+    const track = target.nextElementSibling;
     if (target.classList.contains('active')) {
       target.classList.remove('active');
       track.pause();
@@ -22,7 +20,6 @@ if (playBtn) {
       track.play();
     }
   };
-
   playBtn.addEventListener('click', onClickPlayAudio);
 }
 
@@ -38,25 +35,22 @@ if (playBtn) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
-var openers = document.querySelectorAll('.main-nav-opener');
-
+const openers = document.querySelectorAll('.main-nav-opener');
 if (openers) {
-  var mainNav = document.querySelector('.main-nav');
-  var closers = document.querySelectorAll('.main-nav-closer');
-  var windowWidth = window.innerWidth;
-  window.addEventListener('resize', function () {
+  const mainNav = document.querySelector('.main-nav');
+  const closers = document.querySelectorAll('.main-nav-closer');
+  let windowWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
     windowWidth = window.innerWidth;
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.main-nav__section', {
       x: 0
     });
   });
-  var isNavOpen = false;
-
-  var onClickHandler = function onClickHandler() {
+  let isNavOpen = false;
+  const onClickHandler = () => {
     mainNav.classList.toggle('active');
     isNavOpen = !isNavOpen;
-    var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
-
+    let tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
     if (windowWidth > 1023 && isNavOpen) {
       tl.fromTo('.main-nav', {
         opacity: 0
@@ -89,7 +83,6 @@ if (openers) {
     } else {
       tl.kill();
     }
-
     if (windowWidth < 1024 && isNavOpen) {
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo('.main-nav', {
         opacity: 0
@@ -100,23 +93,19 @@ if (openers) {
       });
     }
   };
-
-  openers.forEach(function (opener) {
+  openers.forEach(opener => {
     opener.addEventListener('click', onClickHandler);
   });
-  closers.forEach(function (closer) {
+  closers.forEach(closer => {
     closer.addEventListener('click', onClickHandler);
   });
 }
-
-var innerOpeners = document.querySelectorAll('.main-nav-inner-list-opener');
-
+const innerOpeners = document.querySelectorAll('.main-nav-inner-list-opener');
 if (innerOpeners) {
-  var backBtns = document.querySelectorAll('.main-nav-back');
-
-  var onClickOpenInnerList = function onClickOpenInnerList(evt) {
-    var level = evt.target.dataset.level;
-    var currentNav = document.querySelector(".main-nav__section[data-nav-level=\"".concat(level, "\"]"));
+  const backBtns = document.querySelectorAll('.main-nav-back');
+  const onClickOpenInnerList = evt => {
+    const level = evt.target.dataset.level;
+    const currentNav = document.querySelector(`.main-nav__section[data-nav-level="${level}"]`);
     currentNav.style.zIndex = 100 + Number(level);
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(currentNav, {
       x: '-100%'
@@ -126,26 +115,24 @@ if (innerOpeners) {
       ease: 'ease-in'
     });
   };
-
-  var onClickCloseInnerList = function onClickCloseInnerList(evt) {
-    var level = evt.currentTarget.dataset.level;
-    var currentNav = document.querySelector(".main-nav__section[data-nav-level=\"".concat(level, "\"]"));
+  const onClickCloseInnerList = evt => {
+    const level = evt.currentTarget.dataset.level;
+    const currentNav = document.querySelector(`.main-nav__section[data-nav-level="${level}"]`);
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(currentNav, {
       x: '0'
     }, {
       x: '-100%',
       duration: .5,
       ease: 'ease-in',
-      onComplete: function onComplete() {
+      onComplete: () => {
         currentNav.style.zIndex = Number(level) - 1;
       }
     });
   };
-
-  innerOpeners.forEach(function (opener) {
+  innerOpeners.forEach(opener => {
     opener.addEventListener('click', onClickOpenInnerList);
   });
-  backBtns.forEach(function (btn) {
+  backBtns.forEach(btn => {
     btn.addEventListener('click', onClickCloseInnerList);
   });
 }
@@ -163,12 +150,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
-var stuffSwiper = document.querySelector('.stuff-swiper');
-
+const stuffSwiper = document.querySelector('.stuff-swiper');
 if (stuffSwiper) {
-  var isActive = true;
-  var swiper = instance();
-
+  let isActive = true;
+  let swiper = instance();
   function instance() {
     return new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](stuffSwiper, {
       slidesPerView: 3,
@@ -192,9 +177,7 @@ if (stuffSwiper) {
       }
     });
   }
-
   ;
-
   if (window.innerWidth < 769) {
     stuffSwiper.querySelector('.stuff-section__list').classList.add('swiper-wrapper');
     swiper = instance();
@@ -202,14 +185,12 @@ if (stuffSwiper) {
     swiper.update();
     swiper.disable(true, true);
   }
-
-  window.addEventListener('resize', function () {
+  window.addEventListener('resize', () => {
     if (window.innerWidth < 769 && !isActive) {
       stuffSwiper.querySelector('.stuff-section__list').classList.add('swiper-wrapper');
       isActive = true;
       swiper = instance();
     }
-
     if (window.innerWidth > 768 && isActive) {
       isActive = false;
       swiper.destroy(true, true);
