@@ -1,0 +1,44 @@
+.cooperation-section {
+    @extend .lw-section-offset;
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        outline: 1px solid red;
+         
+        @include m-b-tablet-lg-down {
+          grid-template-columns: 1fr;
+        }
+      }
+      .cooperation-info {
+        @extend .flex-centered-content;
+        padding: 10px;
+        outline: 1px solid red;
+        @include m-b-tablet-lg-down {
+            order: 1;
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 600;
+            color: var(--dark);
+        }
+      }
+      .cooperation-img {
+        min-height: 400px;
+        background-image: url("../assets/img/kartinka-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include m-b-tablet-lg-down {
+            order: 2;
+            min-height: 300px;
+          }
+          @include m-b-tablet-down {
+            min-height: 280px;
+          }
+      }
+}

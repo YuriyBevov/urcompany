@@ -1,0 +1,48 @@
+.our-team-section {
+    @extend .lw-section-offset;
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        outline: 1px solid red;
+         
+        @include m-b-tablet-lg-down {
+          grid-template-columns: 1fr;
+        }
+      }
+      .our-team-info {
+        @extend .flex-column;
+        align-items: center;
+        padding: 10px;
+        outline: 1px solid red;
+
+        h1 {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            color: var(--accent);
+        }
+        span {
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 600;
+            color: var(--dark);
+        }
+      }
+      .our-team-img {
+        min-height: 400px;
+        background-image: url("../assets/img/nasha-komanda-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include m-b-tablet-lg-down {
+            min-height: 300px;
+          }
+          @include m-b-tablet-down {
+            min-height: 280px;
+          }
+      }
+}

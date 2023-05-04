@@ -1,0 +1,111 @@
+.about-us-section {
+  @extend .lw-section-offset;
+    &__block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      outline: 1px solid red;
+       
+      @include m-b-tablet-lg-down {
+        grid-template-columns: 1fr;
+      }
+    }
+    .presentation {
+      @extend .flex-column;
+      justify-content: center;
+      outline: 1px solid red;
+      @include m-b-tablet-lg-down {
+        order: 1;
+      }
+        h1 {
+          padding: 10px 10px 40px 10px;
+          outline: 1px solid red;
+        }
+        span {
+          padding: 10px 10px 60px 10px;
+          font-weight: 500;
+          outline: 1px solid red;
+        }
+        @include m-b-tablet-lg-down {
+          align-items: center;
+        }
+        @include m-b-tablet-lg-down {
+          align-items: center;
+        }
+    }
+    .director {
+      min-height: 600px;
+      background-image: url("../assets/img/director.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      outline: 1px solid red;
+
+      @include m-b-tablet-lg-down {
+        order: 2;
+        min-height: 800px;
+      }
+      @include m-b-tablet-down {
+        order: 2;
+        min-height: 480px;
+      }
+
+      &__info {
+        position: absolute;
+        left: 0;
+        bottom: 220px;
+        padding: 7px;
+        outline: 1px solid red;
+        @extend .flex-column;
+
+        @include m-b-tablet-down {
+          top: 100%;
+        }
+
+        span {
+          margin-bottom: 10px;
+          font-weight: 600;
+          color: var(--accent);
+          font-size: 20px;
+        }
+        p {
+          @extend .flex-column;
+          margin: 0 0 5px 0;
+          font-weight: 500;
+          font-size: 13px;
+
+          @include m-b-tablet-lg-down {
+            font-size: 17px;
+          }
+          @include m-b-tablet-down {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+}
+
+.about-us-section__btn {
+    max-width: 200px;
+    @extend .hover-opacity;
+    margin: 10px;
+
+    @include m-b-tablet-lg-down {
+      display: none;
+    }
+  }
+.about-us-btn {
+  display: none;
+
+  @include m-b-tablet-lg-down {   
+    max-width: 100%; 
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+  @include m-b-tablet-down {
+    padding-top: 130px;
+  }
+}  

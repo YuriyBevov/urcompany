@@ -26,6 +26,7 @@
 @import "./components/contact-phones.scss";
 @import "./components/contact-address.scss";
 @import "./components/worktime.scss";
+@import "./components/requisites.scss";
 
 @import "./components/bordered-banner.scss";
 
@@ -60,7 +61,17 @@
 
 /*contact-page*/
 @import "./sections/contact-page/contact-section.scss";
+@import "./sections/contact-page/requisites-section.scss";
 /*contact-page*/
+
+/*about-us-page*/
+@import "./sections/about-us-page/_about-us-section.scss";
+@import "./sections/about-us-page/_services-section.scss";
+@import "./sections/about-us-page/cooperation-section.scss";
+@import "./sections/about-us-page/our-team-section.scss";
+@import "./sections/about-us-page/activities-section.scss";
+
+/*about-us-page*/
 
 
 
