@@ -1,0 +1,71 @@
+.activities-section {
+    @extend .lw-section-offset;
+
+    span {
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 20px;
+        outline: 1px solid red;
+    }
+
+    &__list {
+        @extend .flex-wrap;
+        width: 100%;  
+        gap: 30px;
+        padding: 0;
+        li {
+            @extend .flex-column;
+            align-items: center;
+            width: 30%;
+
+            @include m-b-tablet-down {
+              width: 47%;
+            }
+            @include m-b-mobile-lg-down {
+              width: 100%;
+            }
+      
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+      
+            }
+      
+            div {
+              min-width: 100%;
+              font-size: 30px;
+              font-weight: 600;
+              text-align: center;
+              color: var(--accent);
+              background: var(--gray);
+              @extend .flex-centered-content;
+              text-align: left;
+              padding: 20px 0;
+      
+              @include m-b-tablet-lg-down {
+                font-size: 25px;
+              }
+      
+              @include m-b-down(480px) {
+                font-size: 20px;
+              }
+            }
+      
+            &:last-child {
+                background-color: var(--accent);
+                display: flex;
+                justify-content: flex-end;
+                a {
+                font-size: 30px;
+                font-weight: 600;
+                color: var(--white);
+                text-align: left;
+                padding-bottom: 20px;
+                }
+              }
+          }
+    }
+}
